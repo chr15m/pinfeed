@@ -1,10 +1,8 @@
-Full screen Pinterest image feeds.
+Full-screen Pinterest image feed. For art referencing.
 
-For artists who want to quickly access reference material in high resolution.
+### Self-host
 
-### Deploy
-
-This is a Flask app. Deploy with WSGI etc.
+This is a Flask app. Deploy with WSGI etc. You can use [Piku](https://piku.github.io/).
 
 ### Dev
 
