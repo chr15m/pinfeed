@@ -9,7 +9,7 @@ import re
 from ntpl import render, slurp, replace, attr
 from feedparser import parse
 
-CACHE_SECONDS = int(environ.get("CACHE_SECONDS", 300000))
+CACHE_SECONDS = int(environ.get("CACHE_SECONDS", 300))
 
 re_img = re.compile('<img.*?src="(.*?)"', re.IGNORECASE | re.MULTILINE)
 
