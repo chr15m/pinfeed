@@ -13,6 +13,7 @@ idna==2.9
 itsdangerous==1.1.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
+mistune==2.0.0a4
 ntpl==0.0.1
 pyhiccup==0.1
 requests==2.23.0
