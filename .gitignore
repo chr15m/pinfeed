@@ -1,0 +1,7 @@
+.direnv
+.envrc
+.*.swp
+__pycache__
+.python-version
+cached/*
+workspace

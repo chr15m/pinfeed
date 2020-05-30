@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>PinFeed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://chr15m.github.io/minimal-stylesheet/minimal.css" >
+    <link rel="stylesheet" type="text/css" href="https://chr15m.github.io/minimal-stylesheet/minimal-inputs.css" >
+  </head>
+  <body>
+    <section id="main"></section>
+    <footer>
+      <a href="https://github.com/chr15m/pinfeed">src</a>
+      <span class="divider">/</span>
+      <a href="https://twitter.com/mccrmx">@mccrmx</a>
+      <span class="divider">/</span>
+      <a href="https://mccormick.cx">mccormick.cx</a>
+    </footer>
+  </body>
+  <script>
+    function go(ev) {
+      var user = document.getElementById("user").value;
+      var board = document.getElementById("board").value;
+      document.location.href = document.location.href + "/" + user + (board ? "/" + board : "");
+    }
+  </script>
+  <style>
+    html, body {
+      min-height: 100%;
+      height: 100%;
+    }
+
+    section#main {
+      text-align: center;
+      min-height: 80%;
+    }
+
+    a#home {
+      position: absolute;
+      left: 0.25em;
+      top: 0px;
+      text-decoration: none;
+      font-size: 4em;
+    }
+
+    a {
+      display: block;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    div.formset {
+      margin: 5em 1em;
+    }
+
+    div.entry {
+      margin: 200px 1em;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 2em;
+    }
+
+    footer a {
+      display: inline-block;
+      text-decoration: none;
+      margin: 1em;
+    }
+
+    @media only screen and (max-width: 600px) {
+      div.formset > * {
+        display: block;
+        margin: 0.25em auto;
+      }
+
+      footer {
+        margin-top: 5em;
+      }
+
+      footer a {
+        display: block;
+      }
+
+      span.divider {
+        display: none;
+      }
+    }
+  </style>
+</html>
