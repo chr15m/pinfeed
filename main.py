@@ -26,7 +26,7 @@ def index():
          ["input", {"id": "user", "placeholder": "user"}],
          ["input", {"id": "board", "placeholder": "board"}],
          ["button", {"onclick": "go()"}, "go"]],
-        ["a", {"href": "chrismgamedraw"}, "e.g. chrismgamedraw"],
+        ["a", {"href": "chrismgamedraw/me"}, "e.g. chrismgamedraw/me"],
         ["p", "I use Pinterest for referencing art during drawing practice. " +
             "I found it hard to access the full resolution images through the Pinterest interface, " +
             "so I made this app to browse and view collections at full resolution."],]
