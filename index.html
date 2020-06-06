@@ -21,7 +21,10 @@
     function go(ev) {
       var user = document.getElementById("user").value;
       var board = document.getElementById("board").value;
-      document.location.href = document.location.href + "/" + user + (board ? "/" + board : "");
+      var href = document.location.href.replace(/\/+$/g, '');
+      if (user) {
+        document.location.href = href + "/" + user + (board ? "/" + board : "");
+      }
     }
   </script>
   <style>
