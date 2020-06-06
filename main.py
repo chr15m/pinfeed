@@ -21,12 +21,15 @@ t = slurp("index.html")
 def index():
     content = [
         ["h1", "PinFeed"],
-        ["p", "Full-screen Pinterest image feed. For art referencing."],
+        ["h3", "Full-screen Pinterest image feed."],
         ["div", {"class": "formset"},
          ["input", {"id": "user", "placeholder": "user"}],
          ["input", {"id": "board", "placeholder": "board"}],
          ["button", {"onclick": "go()"}, "go"]],
-        ["a", {"href": "chrismgamedraw"}, "e.g. chrismgamedraw"]]
+        ["a", {"href": "chrismgamedraw"}, "e.g. chrismgamedraw"],
+        ["p", "I use Pinterest for referencing art during drawing practice. " +
+            "I found it hard to access the full resolution images through the Pinterest interface, " +
+            "so I made this app to browse and view collections at full resolution."],]
     t1 = t
     #t1 = attr(t, "section#main", "id", "readme")
     return replace(t1, "section", render(content))

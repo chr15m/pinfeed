@@ -1,4 +1,6 @@
-Full-screen Pinterest image feed. For art referencing.
+Full-screen Pinterest image feed.
+
+I use Pinterest for referencing art during drawing practice. I found it hard to access the full resolution images through the Pinterest interface, so I made this app to browse and view collections at full resolution.
 
 ### Self-host
 
