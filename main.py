@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from time import time
-from os import environ
-from os.path import getmtime, join, isfile
+from os import environ, makedirs
+from os.path import getmtime, join, isfile, isdir
 from urllib.parse import urlencode
 from json import dumps, loads
 import re
@@ -74,6 +74,8 @@ def getboard(board):
         feed = parse("https://www.pinterest.com/" + board + ".rss")
         if feed.get("bozo_exception"):
             return None
+        if not isdir("cached"):
+            makedirs("cached")
         with open(filename, "w") as f:
             f.write(dumps(feed))
         return feed
