@@ -48,8 +48,8 @@ def view(board):
         return http404()
     meta = feed.get("feed")
     result = [
-        #["a", {"href": "/", "id": "home"}, "⬅"],
-        ["h1", ["a", {"href": meta.get("link")}, board.split("/")[0] + " / " + meta.get("title")]],
+        ["a", {"href": "/", "id": "home"}, "pinfeed"],
+        ["h3", ["a", {"href": meta.get("link")}, board.split("/")[0] + " / " + meta.get("title")]],
         #["h4", meta.get("updated")],
     ]
     for e in feed.get("entries"):
