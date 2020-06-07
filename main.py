@@ -21,7 +21,7 @@ t = slurp("index.html")
 def index():
     content = [
         ["h1", "PinFeed"],
-        ["h3", "Full-screen Pinterest image feed."],
+        ["h3", "Full-size Pinterest image feed."],
         ["div", {"class": "formset"},
          ["input", {"id": "user", "placeholder": "user"}],
          ["input", {"id": "board", "placeholder": "board"}],
