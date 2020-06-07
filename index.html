@@ -44,7 +44,7 @@
     }
 
     var boardlist = document.getElementById("boards");
-    if (boardlist) {
+    if (boardlist && boards.length) {
       boardlist.innerHTML = "";
       boards.forEach(function(b) {
         var el = document.createElement("a");
