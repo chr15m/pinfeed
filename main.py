@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from time import time
 from os import environ, makedirs
 from os.path import getmtime, join, isfile, isdir
@@ -67,6 +67,10 @@ def view(board):
     # result = ["pre", dumps(feed, indent=2)]
     t1 = replace(t, "section#main", render(result))
     return replace(t1, "title", "PinFeed: " + meta.get("title"))
+
+@app.route('/icon.png')
+def icon():
+    return send_from_directory(".", "icon.png", mimetype='image/png')
 
 def getboard(board):
     filename = join("cached", board.replace("/", ".") + ".json")
