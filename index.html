@@ -19,13 +19,39 @@
     </footer>
   </body>
   <script>
+    var baseurl = document.location.href.replace(/\/+$/g, '');
+    try {
+      var boards = JSON.parse(localStorage["pinfeed-boards"]);
+    } catch(e) {
+      var boards = [];
+    }
+
     function go(ev) {
       var user = document.getElementById("user").value;
       var board = document.getElementById("board").value;
-      var href = document.location.href.replace(/\/+$/g, '');
       if (user) {
-        document.location.href = href + "/" + user + (board ? "/" + board : "");
+        var loc = user + (board ? "/" + board : "");
+        addboard(loc);
+        document.location.href = baseurl + "/" + loc;
       }
+    }
+
+    function addboard(loc) {
+      if (boards.indexOf(loc) == -1) {
+        boards.push(loc);
+        localStorage["pinfeed-boards"] = JSON.stringify(boards);
+      }
+    }
+
+    var boardlist = document.getElementById("boards");
+    if (boardlist) {
+      boardlist.innerHTML = "";
+      boards.forEach(function(b) {
+        var el = document.createElement("a");
+        el.href = baseurl + "/" + b;
+        el.textContent = b;
+        boardlist.appendChild(el);
+      });
     }
   </script>
   <style>
@@ -60,7 +86,7 @@
       margin: 5em 1em;
     }
 
-    div.formset + a {
+    #boards {
       margin-top: -2em;
       margin-bottom: 3em;
     }
