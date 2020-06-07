@@ -29,6 +29,7 @@
     function go(ev) {
       var user = document.getElementById("user").value;
       var board = document.getElementById("board").value;
+      board = board.replace(" ", "-").toLowerCase();
       if (user) {
         var loc = user + (board ? "/" + board : "");
         addboard(loc);
