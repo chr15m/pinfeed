@@ -53,6 +53,16 @@
         boardlist.appendChild(el);
       });
     }
+
+    var btn = document.querySelector("button");
+    var inputs = document.querySelectorAll("input");
+    Array.prototype.slice.call(inputs).forEach(function(i) {
+      i.onkeyup = function(ev) {
+        if (ev.keyCode == 13) {
+          btn.click();
+        }
+      }
+    });
   </script>
   <style>
     html, body {
